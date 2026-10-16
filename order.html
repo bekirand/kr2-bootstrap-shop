@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Оформление заказа аудиотехники в интернет-магазине SoundPulse на Bootstrap 5. Быстрая доставка по Москве и РФ.">
+  <title>Оформление заказа — SoundPulse</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <!-- Шапка сайта с навигацией Bootstrap Navbar -->
+  <header class="sticky-top bg-white border-bottom shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-dark" href="index.html">
+          <img src="images/logo.svg" alt="Логотип SoundPulse" class="navbar-brand-logo">
+          <span>SoundPulse</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Товар дня</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="order.html">Оформить заказ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
+              Быстрая заявка
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-4">
+    <div class="container">
+      <!-- Хлебные крошки (Bootstrap Breadcrumb) -->
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Оформление заказа</li>
+        </ol>
+      </nav>
+
+      <div class="mb-4">
+        <h1 class="h2 fw-bold mb-1">Оформление покупки</h1>
+        <p class="text-muted mb-0">Заполните контактные данные для подтверждения резерва и доставки оборудования</p>
+      </div>
+
+      <!-- Двухколоночный макет: Форма заявки + Состав заказа (Bootstrap Grid) -->
+      <div class="row g-4">
+        <!-- Левая колонка: Форма заказа (Bootstrap Form) -->
+        <section class="col-12 col-lg-7" aria-labelledby="form-heading">
+          <div class="card border-0 shadow-sm p-4">
+            <h2 id="form-heading" class="h5 fw-bold mb-4">Данные покупателя и доставки</h2>
+
+            <form action="order.html" method="get">
+              <!-- Блок: Контакты -->
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-sm-6">
+                  <label for="orderName" class="form-label">Имя и фамилия <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="orderName" name="name" placeholder="Константин Соколов" required>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label for="orderPhone" class="form-label">Телефон <span class="text-danger">*</span></label>
+                  <div class="input-group">
+                    <span class="input-group-text">+7</span>
+                    <input type="tel" class="form-control" id="orderPhone" name="phone" placeholder="(999) 000-00-00" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Блок: Email с Input Group -->
+              <div class="mb-3">
+                <label for="orderEmail" class="form-label">Электронная почта <span class="text-danger">*</span></label>
+                <div class="input-group">
+                  <span class="input-group-text">@</span>
+                  <input type="email" class="form-control" id="orderEmail" name="email" placeholder="client@example.ru" required aria-describedby="emailHelp">
+                </div>
+                <div id="emailHelp" class="form-text">На эту почту будет выслан электронный чек и трек-номер посылки.</div>
+              </div>
+
+              <!-- Блок: Выбор товара (Form Select) -->
+              <div class="mb-3">
+                <label for="orderProduct" class="form-label">Выбранное оборудование <span class="text-danger">*</span></label>
+                <select class="form-select" id="orderProduct" name="product" required>
+                  <option value="headphones-pro" selected>SoundPulse Pro Wireless — 24 990 ₽</option>
+                  <option value="studio-monitors">Studio 5X Active Pair — 42 500 ₽</option>
+                  <option value="dac-amp">Master DAC & Amp Mini — 18 900 ₽</option>
+                  <option value="portable-speaker">Outdoor Hi-Fi 360 — 12 400 ₽</option>
+                  <option value="earbuds">Clarity IEM Quad-Driver — 15 800 ₽</option>
+                </select>
+              </div>
+
+              <!-- Блок: Способ получения заказа (Radio Form Checks) -->
+              <div class="mb-3">
+                <label class="form-label d-block fw-bold small text-secondary">Способ получения заказа</label>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="radio" name="deliveryMethod" id="deliveryCourier" value="courier" checked>
+                  <label class="form-check-label" for="deliveryCourier">
+                    Курьерская доставка по Москве (Бесплатно, сегодня при заказе до 15:00)
+                  </label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="radio" name="deliveryMethod" id="deliveryPickup" value="pickup">
+                  <label class="form-check-label" for="deliveryPickup">
+                    Самовывоз из шоурума (г. Москва, ул. Мясницкая, 20)
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="deliveryMethod" id="deliveryCdek" value="cdek">
+                  <label class="form-check-label" for="deliveryCdek">
+                    Экспресс-доставка СДЭК по России со страховкой (1–3 дня)
+                  </label>
+                </div>
+              </div>
+
+              <!-- Блок: Адрес доставки -->
+              <div class="mb-3">
+                <label for="orderAddress" class="form-label">Адрес доставки</label>
+                <input type="text" class="form-control" id="orderAddress" name="address" placeholder="г. Москва, ул. Арбат, д. 15, кв. 42">
+              </div>
+
+              <!-- Блок: Комментарий к заявке -->
+              <div class="mb-3">
+                <label for="orderComment" class="form-label">Комментарий или пожелания к заказу</label>
+                <textarea class="form-control" id="orderComment" name="comment" rows="3" placeholder="Удобное время звонка курьера, пожелания по балансному кабелю или прослушиванию"></textarea>
+              </div>
+
+              <!-- Промокод (Input Group с кнопкой) -->
+              <div class="mb-4">
+                <label for="orderPromo" class="form-label">Промокод на скидку</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="orderPromo" name="promo" placeholder="SOUND2026">
+                  <button class="btn btn-outline-secondary" type="button">Применить</button>
+                </div>
+              </div>
+
+              <!-- Согласие на обработку ПД (Form Check) -->
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="orderConsent" name="consent" required checked>
+                <label class="form-check-label small text-muted" for="orderConsent">
+                  Я согласен на обработку персональных данных в соответствии с требованиями Федерального закона № 152-ФЗ <span class="text-danger">*</span>
+                </label>
+              </div>
+
+              <button class="btn btn-primary btn-lg w-100" type="submit">
+                Подтвердить и отправить заказ
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Правая колонка: Содержимое заказа и гарантия (Bootstrap List Group + Alert) -->
+        <aside class="col-12 col-lg-5" aria-labelledby="summary-heading">
+          <div class="card border-0 shadow-sm p-4 mb-4 sticky-top" style="top: 90px; z-index: 10;">
+            <h2 id="summary-heading" class="h5 fw-bold mb-3">Состав вашего заказа</h2>
+
+            <ul class="list-group list-group-flush mb-3">
+              <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                <div class="d-flex align-items-center gap-3">
+                  <img src="images/headphones-pro.svg" alt="SoundPulse Pro" style="width: 48px; height: 48px;" class="bg-light p-1 rounded">
+                  <div>
+                    <h3 class="h6 mb-0 fw-bold">SoundPulse Pro Wireless</h3>
+                    <small class="text-muted">1 шт. × 24 990 ₽</small>
+                  </div>
+                </div>
+                <span class="fw-bold">24 990 ₽</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                <span class="text-muted">Скидка по акции</span>
+                <span class="badge text-bg-success">-3 910 ₽</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                <span class="text-muted">Доставка курьером</span>
+                <span class="text-success fw-bold">Бесплатно</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center px-0 pt-3 border-top">
+                <span class="fs-5 fw-bold">Итого к оплате:</span>
+                <span class="fs-4 fw-bold text-dark">24 990 ₽</span>
+              </li>
+            </ul>
+
+            <!-- Информационный блок безопасности (Bootstrap Alert) -->
+            <div class="alert alert-info border-info mb-0 small" role="alert">
+              <div class="d-flex align-items-start gap-2">
+                <span class="fs-5">ℹ</span>
+                <div>
+                  <strong>Оплата при получении</strong> после осмотра и проверки звучания наушников. Вы ничем не рискуете.
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer class="site-footer py-5 mt-auto">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="images/logo.svg" alt="SoundPulse" class="navbar-brand-logo">
+            <span class="fs-5 fw-bold text-white">SoundPulse</span>
+          </div>
+          <p class="text-secondary small">
+            Премиальное аудиооборудование, студийные мониторы и усилители для музыкантов и ценителей звука высокой точности.
+          </p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h4 class="text-white h6 mb-3">Навигация</h4>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="index.html">Главная</a></li>
+            <li class="mb-2"><a href="catalog.html">Каталог</a></li>
+            <li class="mb-2"><a href="product.html">Товар дня</a></li>
+            <li class="mb-2"><a href="order.html">Заказ</a></li>
+            <li class="mb-2"><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h4 class="text-white h6 mb-3">Поддержка</h4>
+          <p class="small text-secondary mb-1">Вопросы по заказам:</p>
+          <p class="small text-white fw-bold mb-3">support@soundpulse-audio.ru</p>
+          <p class="small text-secondary mb-0">Служба заботы о клиентах работает ежедневно с 10:00 до 21:00.</p>
+        </div>
+        <div class="col-12 col-md-3">
+          <h4 class="text-white h6 mb-3">Контакты шоурума</h4>
+          <p class="small text-secondary mb-1">г. Москва, ул. Мясницкая, д. 20</p>
+          <p class="small text-secondary mb-1">Тел: +7 (495) 890-24-30</p>
+          <p class="small text-secondary mb-3">Пн–Вс: 10:00 — 21:00</p>
+          <button class="btn btn-sm btn-outline-light w-100" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
+            Быстрая консультация
+          </button>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-secondary">
+        <div>© 2026 SoundPulse. Все права защищены.</div>
+        <div>Контрольная работа №2 | Студент: Белишко Кирилл (ЭФБО-17-25)</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно быстрой заявки -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5 fw-bold" id="orderModalLabel">Быстрая консультация аудиоинженера</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <form action="order.html" method="get">
+          <div class="modal-body">
+            <p class="text-muted small mb-3">
+              Нужна помощь в подборе аудиотракта под ваши жанры музыки? Напишите телефон, мы свяжемся с вами.
+            </p>
+            <div class="mb-3">
+              <label for="modalOrderName" class="form-label">Ваше имя <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="modalOrderName" name="name" placeholder="Константин" required>
+            </div>
+            <div class="mb-3">
+              <label for="modalOrderPhone" class="form-label">Номер телефона <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="modalOrderPhone" name="phone" placeholder="+7 (999) 000-00-00" required>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="modalOrderAgree" required checked>
+              <label class="form-check-label small text-muted" for="modalOrderAgree">
+                Согласен на обработку персональных данных
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+            <button type="submit" class="btn btn-primary">Позвоните мне</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
