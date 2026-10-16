@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Контакты шоурума SoundPulse в Москве: адрес, телефон, схема проезда и форма обратной связи на Bootstrap 5.">
+  <title>Контакты и шоурум — SoundPulse</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <!-- Шапка сайта с навигацией Bootstrap Navbar -->
+  <header class="sticky-top bg-white border-bottom shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-dark" href="index.html">
+          <img src="images/logo.svg" alt="Логотип SoundPulse" class="navbar-brand-logo">
+          <span>SoundPulse</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Товар дня</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="order.html">Оформить заказ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
+              Быстрая заявка
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-4">
+    <div class="container">
+      <!-- Хлебные крошки (Bootstrap Breadcrumb) -->
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Контакты и шоурум</li>
+        </ol>
+      </nav>
+
+      <div class="mb-4">
+        <h1 class="h2 fw-bold mb-1">Контакты и шоурум SoundPulse</h1>
+        <p class="text-muted mb-0">Приглашаем на персональное прослушивание аудиотехники в акустически подготовленной комнате</p>
+      </div>
+
+      <!-- Информационный алерт о работе шоурума -->
+      <div class="alert alert-success border-success shadow-sm mb-4" role="alert">
+        <div class="d-flex align-items-center gap-2">
+          <span class="fs-4">●</span>
+          <div>
+            <strong>Шоурум открыт сегодня до 21:00.</strong> Свободные стойки для прослушивания доступны без предварительной записи.
+          </div>
+        </div>
+      </div>
+
+      <!-- Сетка с контактами и формой связи (Bootstrap Grid) -->
+      <div class="row g-4 mb-5">
+        <!-- Левая колонка: Реквизиты и адрес -->
+        <section class="col-12 col-lg-5" aria-labelledby="showroom-heading">
+          <div class="card border-0 shadow-sm p-4 h-100">
+            <h2 id="showroom-heading" class="h5 fw-bold mb-4">Информация о флагманском магазине</h2>
+            
+            <address class="mb-4 not-italic">
+              <div class="mb-3">
+                <span class="fw-bold d-block text-secondary small">Адрес шоурума:</span>
+                <span class="fs-6">г. Москва, ул. Мясницкая, д. 20 (м. Лубянка / Чистые пруды)</span>
+              </div>
+              <div class="mb-3">
+                <span class="fw-bold d-block text-secondary small">Телефон для консультаций:</span>
+                <a href="tel:+74958902430" class="fs-6 text-decoration-none fw-bold text-dark">+7 (495) 890-24-30</a>
+              </div>
+              <div class="mb-3">
+                <span class="fw-bold d-block text-secondary small">Электронная почта:</span>
+                <a href="mailto:info@soundpulse-audio.ru" class="fs-6 text-decoration-none text-primary">info@soundpulse-audio.ru</a>
+              </div>
+              <div class="mb-0">
+                <span class="fw-bold d-block text-secondary small">Часы работы:</span>
+                <span class="fs-6">Понедельник — Воскресенье: с 10:00 до 21:00 (без перерывов)</span>
+              </div>
+            </address>
+
+            <hr class="my-4">
+
+            <h3 class="h6 fw-bold mb-3">Оснащение комнаты прослушивания</h3>
+            <ul class="list-unstyled small text-muted mb-0">
+              <li class="mb-2">✓ Акустическая обработка панелями из базальтовой ваты</li>
+              <li class="mb-2">✓ Балансные сетевые кондиционеры и фильтры питания</li>
+              <li class="mb-2">✓ Подключение любых наушников через разъемы 3.5, 6.35 и 4.4 мм</li>
+              <li class="mb-0">✓ Возможность воспроизведения с ваших плееров и смартфонов</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Правая колонка: Форма обратной связи -->
+        <section class="col-12 col-lg-7" aria-labelledby="feedback-heading">
+          <div class="card border-0 shadow-sm p-4 h-100">
+            <h2 id="feedback-heading" class="h5 fw-bold mb-4">Напишите нам или закажите обратный звонок</h2>
+
+            <form action="contacts.html" method="get">
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-sm-6">
+                  <label for="contactName" class="form-label">Ваше имя <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="contactName" name="name" placeholder="Дмитрий" required>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label for="contactEmail" class="form-label">Электронная почта <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" id="contactEmail" name="email" placeholder="dmitry@example.ru" required>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="contactSubject" class="form-label">Тема обращения <span class="text-danger">*</span></label>
+                <select class="form-select" id="contactSubject" name="subject" required>
+                  <option value="test-room" selected>Запись на прослушивание в шоуруме</option>
+                  <option value="equipment-choice">Помощь в подборе наушников или мониторов</option>
+                  <option value="warranty">Вопросы по гарантии и сервисному обслуживанию</option>
+                  <option value="corporate">Корпоративные заказы для студий</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="contactMessage" class="form-label">Сообщение или вопрос <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="contactMessage" name="message" rows="4" placeholder="Опишите, какие модели вы хотели бы сравнить или какой у вас источник звука" required></textarea>
+              </div>
+
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="contactAgree" name="agree" required checked>
+                <label class="form-check-label small text-muted" for="contactAgree">
+                  Согласен на обработку персональных данных в соответствии с политикой конфиденциальности <span class="text-danger">*</span>
+                </label>
+              </div>
+
+              <button class="btn btn-primary px-4" type="submit">
+                Отправить сообщение
+              </button>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      <!-- Блок схемы проезда / карты -->
+      <section class="card border-0 shadow-sm p-4 mb-4" aria-labelledby="map-heading">
+        <h2 id="map-heading" class="h5 fw-bold mb-3">Как до нас добраться</h2>
+        <div class="bg-light p-4 rounded-3 text-center border">
+          <p class="lead mb-2 fw-bold text-dark">Шоурум SoundPulse — Мясницкая, 20</p>
+          <p class="text-muted small mb-3">
+            3 минуты пешком от станции метро «Чистые пруды» (выход №1). Вход с главного фасада Мясницкой улицы, вывеска «SoundPulse Hi-Fi Studio». Для автомобилистов доступна гостевая парковка во дворе.
+          </p>
+          <div class="d-inline-flex gap-2">
+            <a href="https://yandex.ru/maps" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+              Открыть в Яндекс.Картах ↗
+            </a>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary">
+              Открыть в Google Maps ↗
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer class="site-footer py-5 mt-auto">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="images/logo.svg" alt="SoundPulse" class="navbar-brand-logo">
+            <span class="fs-5 fw-bold text-white">SoundPulse</span>
+          </div>
+          <p class="text-secondary small">
+            Премиальное аудиооборудование, студийные мониторы и усилители для музыкантов и ценителей звука высокой точности.
+          </p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h4 class="text-white h6 mb-3">Навигация</h4>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="index.html">Главная</a></li>
+            <li class="mb-2"><a href="catalog.html">Каталог</a></li>
+            <li class="mb-2"><a href="product.html">Товар дня</a></li>
+            <li class="mb-2"><a href="order.html">Заказ</a></li>
+            <li class="mb-2"><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h4 class="text-white h6 mb-3">Контакты шоурума</h4>
+          <p class="small text-secondary mb-1">г. Москва, ул. Мясницкая, д. 20</p>
+          <p class="small text-secondary mb-1">Тел: +7 (495) 890-24-30</p>
+          <p class="small text-secondary mb-0">Пн–Вс: 10:00 — 21:00</p>
+        </div>
+        <div class="col-12 col-md-3">
+          <h4 class="text-white h6 mb-3">Свяжитесь с нами</h4>
+          <p class="small text-secondary mb-3">Ответим на любые технические вопросы по тракту.</p>
+          <button class="btn btn-sm btn-outline-light w-100" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
+            Быстрая заявка
+          </button>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-secondary">
+        <div>© 2026 SoundPulse. Все права защищены.</div>
+        <div>Контрольная работа №2 | Студент: Белишко Кирилл (ЭФБО-17-25)</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно быстрой заявки -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5 fw-bold" id="orderModalLabel">Быстрая консультация аудиоинженера</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <form action="contacts.html" method="get">
+          <div class="modal-body">
+            <p class="text-muted small mb-3">
+              Укажите имя и телефон, и наш специалист свяжется с вами для ответа на технические вопросы или бронирования комнаты прослушивания.
+            </p>
+            <div class="mb-3">
+              <label for="modalContactName" class="form-label">Ваше имя <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="modalContactName" name="name" placeholder="Дмитрий" required>
+            </div>
+            <div class="mb-3">
+              <label for="modalContactPhone" class="form-label">Номер телефона <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="modalContactPhone" name="phone" placeholder="+7 (999) 000-00-00" required>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="modalContactAgree" required checked>
+              <label class="form-check-label small text-muted" for="modalContactAgree">
+                Согласен на обработку персональных данных
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+            <button type="submit" class="btn btn-primary">Позвоните мне</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
