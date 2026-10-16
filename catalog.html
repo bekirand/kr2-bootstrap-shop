@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Каталог аудиофильской аппаратуры SoundPulse: наушники, мониторы ближнего поля, усилители и ЦАП с доставкой.">
+  <title>Каталог аудиотехники — SoundPulse</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <!-- Шапка сайта с навигацией Bootstrap Navbar -->
+  <header class="sticky-top bg-white border-bottom shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-dark" href="index.html">
+          <img src="images/logo.svg" alt="Логотип SoundPulse" class="navbar-brand-logo">
+          <span>SoundPulse</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="catalog.html">Каталог</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Товар дня</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="order.html">Оформить заказ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
+              Быстрая заявка
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-4">
+    <div class="container">
+      <!-- Хлебные крошки (Bootstrap Breadcrumb) -->
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Каталог аудиотехники</li>
+        </ol>
+      </nav>
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 pb-2 border-bottom">
+        <div>
+          <h1 class="h2 fw-bold mb-1">Каталог оборудования</h1>
+          <p class="text-muted mb-0">Показано 6 товаров для профессионального и домашнего прослушивания</p>
+        </div>
+        <div class="mt-3 mt-md-0 d-flex align-items-center gap-2">
+          <label for="catalogSort" class="text-nowrap small text-muted">Сортировка:</label>
+          <select class="form-select form-select-sm" id="catalogSort" aria-label="Сортировка товаров">
+            <option selected>По популярности</option>
+            <option value="1">Сначала дешевле</option>
+            <option value="2">Сначала дороже</option>
+            <option value="3">По новизне</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Основная сетка: фильтры слева и карточки справа -->
+      <div class="row g-4">
+        <!-- Боковой фильтр (Aside) -->
+        <aside class="col-12 col-lg-3">
+          <div class="card border-0 shadow-sm p-3 sticky-top" style="top: 90px; z-index: 10;">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="h5 fw-bold mb-0">Фильтры</h2>
+              <button class="btn btn-sm btn-link text-decoration-none text-muted p-0" type="reset">Сбросить</button>
+            </div>
+
+            <form>
+              <!-- Фильтр по категориям -->
+              <div class="mb-4">
+                <h3 class="h6 fw-bold mb-2">Категория</h3>
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="checkbox" id="catHeadphones" checked>
+                  <label class="form-check-label small" for="catHeadphones">Полноразмерные наушники</label>
+                </div>
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="checkbox" id="catMonitors" checked>
+                  <label class="form-check-label small" for="catMonitors">Студийные мониторы</label>
+                </div>
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="checkbox" id="catDac" checked>
+                  <label class="form-check-label small" for="catDac">ЦАП и усилители</label>
+                </div>
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="checkbox" id="catEarbuds">
+                  <label class="form-check-label small" for="catEarbuds">Внутриканальные мониторы</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="catAcoustics">
+                  <label class="form-check-label small" for="catAcoustics">Портативная акустика</label>
+                </div>
+              </div>
+
+              <!-- Фильтр по цене -->
+              <div class="mb-4">
+                <h3 class="h6 fw-bold mb-2">Цена, ₽</h3>
+                <div class="row g-2 mb-2">
+                  <div class="col-6">
+                    <input type="number" class="form-control form-control-sm" placeholder="От 5 000" aria-label="Цена от">
+                  </div>
+                  <div class="col-6">
+                    <input type="number" class="form-control form-control-sm" placeholder="До 80 000" aria-label="Цена до">
+                  </div>
+                </div>
+                <input type="range" class="form-range" min="5000" max="80000" step="1000" id="priceRange">
+              </div>
+
+              <!-- Фильтр по интерфейсам подключения -->
+              <div class="mb-4">
+                <h3 class="h6 fw-bold mb-2">Подключение</h3>
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="checkbox" id="connBluetooth" checked>
+                  <label class="form-check-label small" for="connBluetooth">Bluetooth 5.3 (LDAC / aptX HD)</label>
+                </div>
+                <div class="form-check mb-1">
+                  <input class="form-check-input" type="checkbox" id="connXLR" checked>
+                  <label class="form-check-label small" for="connXLR">Балансный XLR / Jack 6.35</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="connUSB">
+                  <label class="form-check-label small" for="connUSB">USB Type-C Audio</label>
+                </div>
+              </div>
+
+              <!-- Наличие на складе -->
+              <div class="mb-4">
+                <h3 class="h6 fw-bold mb-2">Наличие</h3>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="inStockOnly" checked>
+                  <label class="form-check-label small" for="inStockOnly">Только в наличии в шоуруме</label>
+                </div>
+              </div>
+
+              <button class="btn btn-primary w-100 btn-sm" type="button">Применить фильтры</button>
+            </form>
+          </div>
+        </aside>
+
+        <!-- Сетка карточек товаров (Bootstrap Grid) -->
+        <section class="col-12 col-lg-9" aria-labelledby="catalog-items-heading">
+          <h2 id="catalog-items-heading" class="visually-hidden-custom">Список товаров каталога</h2>
+          
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Товар 1 -->
+            <div class="col">
+              <article class="card h-100 product-card position-relative shadow-sm">
+                <span class="badge text-bg-warning badge-position">Хит продаж</span>
+                <div class="product-card-img-wrapper">
+                  <img src="images/headphones-pro.svg" class="product-card-img" alt="Наушники SoundPulse Pro Wireless">
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <p class="text-muted small mb-1">Полноразмерные наушники</p>
+                  <h3 class="card-title h5 fw-bold">SoundPulse Pro Wireless</h3>
+                  <p class="card-text text-muted small flex-grow-1">
+                    Планарные излучатели, активный шумодав ANC, гибридное проводное/Bluetooth подключение.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                    <span class="fw-bold fs-5 text-dark">24 990 ₽</span>
+                    <div class="btn-group">
+                      <a href="product.html" class="btn btn-sm btn-outline-primary">Обзор</a>
+                      <a href="order.html?product=headphones-pro" class="btn btn-sm btn-primary">Купить</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Товар 2 -->
+            <div class="col">
+              <article class="card h-100 product-card position-relative shadow-sm">
+                <span class="badge text-bg-success badge-position">Новинка</span>
+                <div class="product-card-img-wrapper">
+                  <img src="images/studio-monitors.svg" class="product-card-img" alt="Студийные мониторы Studio 5X Active Pair">
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <p class="text-muted small mb-1">Студийные мониторы</p>
+                  <h3 class="card-title h5 fw-bold">Studio 5X Active Pair</h3>
+                  <p class="card-text text-muted small flex-grow-1">
+                    Двухполосная пара 100 Вт, кевларовые диффузоры 5.25", балансные входы XLR и акустический DSP.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                    <span class="fw-bold fs-5 text-dark">42 500 ₽</span>
+                    <div class="btn-group">
+                      <a href="product.html" class="btn btn-sm btn-outline-primary">Обзор</a>
+                      <a href="order.html?product=studio-monitors" class="btn btn-sm btn-primary">Купить</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Товар 3 -->
+            <div class="col">
+              <article class="card h-100 product-card position-relative shadow-sm">
+                <span class="badge text-bg-danger badge-position">Скидка -18%</span>
+                <div class="product-card-img-wrapper">
+                  <img src="images/dac-amp.svg" class="product-card-img" alt="ЦАП Master DAC & Amp Mini">
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <p class="text-muted small mb-1">ЦАП и усилители</p>
+                  <h3 class="card-title h5 fw-bold">Master DAC & Amp Mini</h3>
+                  <p class="card-text text-muted small flex-grow-1">
+                    Чип ESS Sabre ES9038, балансный выход 4.4 мм, чистый класс A/B до 1500 мВт при 32 Ом.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                    <div>
+                      <span class="fw-bold fs-5 text-danger">18 900 ₽</span>
+                      <span class="text-decoration-line-through text-muted small ms-1">22 990 ₽</span>
+                    </div>
+                    <div class="btn-group">
+                      <a href="product.html" class="btn btn-sm btn-outline-primary">Обзор</a>
+                      <a href="order.html?product=dac-amp" class="btn btn-sm btn-primary">Купить</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Товар 4 -->
+            <div class="col">
+              <article class="card h-100 product-card position-relative shadow-sm">
+                <span class="badge text-bg-secondary badge-position">Классика</span>
+                <div class="product-card-img-wrapper">
+                  <img src="images/portable-speaker.svg" class="product-card-img" alt="Портативная колонка SoundPulse Outdoor Bass">
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <p class="text-muted small mb-1">Портативная акустика</p>
+                  <h3 class="card-title h5 fw-bold">Outdoor Hi-Fi 360</h3>
+                  <p class="card-text text-muted small flex-grow-1">
+                    Влагозащита IP67, стереопара TWS, 60 Вт мощности и 20 часов непрерывного воспроизведения.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                    <span class="fw-bold fs-5 text-dark">12 400 ₽</span>
+                    <div class="btn-group">
+                      <a href="product.html" class="btn btn-sm btn-outline-primary">Обзор</a>
+                      <a href="order.html?product=portable-speaker" class="btn btn-sm btn-primary">Купить</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Товар 5 -->
+            <div class="col">
+              <article class="card h-100 product-card position-relative shadow-sm">
+                <span class="badge text-bg-info badge-position text-dark">Hi-Res</span>
+                <div class="product-card-img-wrapper">
+                  <img src="images/earbuds.svg" class="product-card-img" alt="Внутриканальные мониторы SoundPulse IEM Clarity">
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <p class="text-muted small mb-1">Внутриканальные IEM</p>
+                  <h3 class="card-title h5 fw-bold">Clarity IEM Quad-Driver</h3>
+                  <p class="card-text text-muted small flex-grow-1">
+                    4 арматурных излучателя Knowles, эргономичные корпуса из медицинской смолы, кабель 8 жил.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                    <span class="fw-bold fs-5 text-dark">15 800 ₽</span>
+                    <div class="btn-group">
+                      <a href="product.html" class="btn btn-sm btn-outline-primary">Обзор</a>
+                      <a href="order.html?product=earbuds" class="btn btn-sm btn-primary">Купить</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Товар 6 -->
+            <div class="col">
+              <article class="card h-100 product-card position-relative shadow-sm">
+                <span class="badge text-bg-secondary badge-position">Под заказ</span>
+                <div class="product-card-img-wrapper">
+                  <img src="images/headphones-pro.svg" class="product-card-img" alt="Наушники SoundPulse Studio Open Back">
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <p class="text-muted small mb-1">Студийные открытые</p>
+                  <h3 class="card-title h5 fw-bold">Open Reference 600Ω</h3>
+                  <p class="card-text text-muted small flex-grow-1">
+                    Открытая акустическая конструкция, велюровые амбушюры, естественная панорама для мастеринга.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                    <span class="fw-bold fs-5 text-dark">31 200 ₽</span>
+                    <div class="btn-group">
+                      <a href="product.html" class="btn btn-sm btn-outline-primary">Обзор</a>
+                      <button class="btn btn-sm btn-secondary" disabled>Ожидается</button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Пагинация (Bootstrap Pagination) -->
+          <nav aria-label="Навигация по каталогу" class="mt-5">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Назад</a>
+              </li>
+              <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Вперёд</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer class="site-footer py-5 mt-auto">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="images/logo.svg" alt="SoundPulse" class="navbar-brand-logo">
+            <span class="fs-5 fw-bold text-white">SoundPulse</span>
+          </div>
+          <p class="text-secondary small">
+            Премиальное аудиооборудование, студийные мониторы и усилители для музыкантов и ценителей звука высокой точности.
+          </p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h4 class="text-white h6 mb-3">Навигация</h4>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="index.html">Главная</a></li>
+            <li class="mb-2"><a href="catalog.html">Каталог</a></li>
+            <li class="mb-2"><a href="product.html">Товар дня</a></li>
+            <li class="mb-2"><a href="order.html">Заказ</a></li>
+            <li class="mb-2"><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h4 class="text-white h6 mb-3">Категории</h4>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="catalog.html">Полноразмерные наушники</a></li>
+            <li class="mb-2"><a href="catalog.html">Студийные мониторы</a></li>
+            <li class="mb-2"><a href="catalog.html">ЦАП и усилители</a></li>
+            <li class="mb-2"><a href="catalog.html">Портативная акустика</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3">
+          <h4 class="text-white h6 mb-3">Контакты шоурума</h4>
+          <p class="small text-secondary mb-1">г. Москва, ул. Мясницкая, д. 20</p>
+          <p class="small text-secondary mb-1">Тел: +7 (495) 890-24-30</p>
+          <p class="small text-secondary mb-3">Пн–Вс: 10:00 — 21:00</p>
+          <button class="btn btn-sm btn-outline-light w-100" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
+            Быстрая консультация
+          </button>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-secondary">
+        <div>© 2026 SoundPulse. Все права защищены.</div>
+        <div>Контрольная работа №2 | Студент: Белишко Кирилл (ЭФБО-17-25)</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно быстрой заявки -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5 fw-bold" id="orderModalLabel">Быстрая заявка на подбор аудиотехники</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <form action="order.html" method="get">
+          <div class="modal-body">
+            <p class="text-muted small mb-3">
+              Оставьте заявку, и мы забронируем выбранные товары для тестирования в шоуруме или подготовим счет на оплату.
+            </p>
+            <div class="mb-3">
+              <label for="modalCatalogName" class="form-label">Ваше имя <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="modalCatalogName" name="name" placeholder="Константин" required>
+            </div>
+            <div class="mb-3">
+              <label for="modalCatalogPhone" class="form-label">Номер телефона <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="modalCatalogPhone" name="phone" placeholder="+7 (999) 000-00-00" required>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="modalCatalogAgree" required checked>
+              <label class="form-check-label small text-muted" for="modalCatalogAgree">
+                Согласен на обработку персональных данных
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
