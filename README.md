@@ -23,9 +23,9 @@
 
 ### Локальные ресурсы фреймворка:
 * Стили: `vendor/bootstrap/css/bootstrap.min.css`  
-  *SHA-256:* `d85327d99c7a3ee1f9b5d0500d1370acea3ad2db39c163c2f51f232baedbdede`
+  *SHA-256:* `596a918e5d4c71cb731b23412d5b145e429c2203a23e9bf7ba90eff3e291bbb8`
 * Скрипты: `vendor/bootstrap/js/bootstrap.bundle.min.js`  
-  *SHA-256:* `e4fd49181388c48ec5040bd3fe66f57c29c8e67fcd8502b3354b96ec7ab47cc7`
+  *SHA-256:* `6c75a7cf1bda55690683f20364392d197e8637a4bb12e98d78cf650973d63fff`
 
 Собственный файл стилей `css/custom.css` подключается строго после Bootstrap для точечной кастомизации палитры бренда без нарушения компонентов.
 
