@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SoundPulse — интернет-магазин премиальной аудиотехники на Bootstrap 5. Наушники, студийные мониторы, ЦАП и акустика.">
+  <title>SoundPulse — Аудиотехника и акустические системы</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+  <!-- Шапка сайта с навигацией Bootstrap Navbar -->
+  <header class="sticky-top bg-white border-bottom shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light" aria-label="Основная навигация">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-dark" href="index.html">
+          <img src="images/logo.svg" alt="Логотип SoundPulse" class="navbar-brand-logo">
+          <span>SoundPulse</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Товар дня</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="order.html">Оформить заказ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
+              Быстрая заявка
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Главный баннер (Hero section) -->
+    <section class="py-5 bg-white border-bottom" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-section p-4 p-md-5">
+          <div class="row align-items-center g-4">
+            <div class="col-12 col-lg-7">
+              <span class="badge text-bg-warning mb-2">Новая коллекция 2026</span>
+              <h1 id="hero-heading" class="display-5 fw-bold text-dark mb-3">
+                Честный студийный звук в каждой детали
+              </h1>
+              <p class="lead text-secondary mb-4">
+                Откройте для себя аудиофильские наушники, мониторы ближнего поля и балансные ЦАП с нейтральной АЧХ и эталонной детализацией.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a class="btn btn-primary btn-lg" href="catalog.html">Перейти в каталог</a>
+                <button class="btn btn-outline-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
+                  Консультация эксперта
+                </button>
+              </div>
+            </div>
+            <div class="col-12 col-lg-5 text-center">
+              <img src="images/hero-sound.svg" alt="Аудиосистема SoundPulse" class="hero-illustration img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Преимущества магазина -->
+    <section class="py-5" id="advantages" aria-labelledby="advantages-heading">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 id="advantages-heading" class="fw-bold">Почему выбирают SoundPulse</h2>
+          <p class="text-muted">Предоставляем оригинальную аудиотехнику с официальной гарантией</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+              <div class="card-body">
+                <div class="display-6 text-warning mb-3">★</div>
+                <h3 class="card-title h5 fw-bold">Прямые поставки</h3>
+                <p class="card-text text-muted">Работаем напрямую с сертифицированными производителями аудиооборудования без наценок посредников.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+              <div class="card-body">
+                <div class="display-6 text-warning mb-3">♫</div>
+                <h3 class="card-title h5 fw-bold">Шоурум для прослушивания</h3>
+                <p class="card-text text-muted">Перед покупкой вы можете оценить звучание любых наушников и акустики в подготовленной комнате в Москве.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+              <div class="card-body">
+                <div class="display-6 text-warning mb-3">✔</div>
+                <h3 class="card-title h5 fw-bold">Гарантия 24 месяца</h3>
+                <p class="card-text text-muted">Собственный сервисный центр и оперативная замена оборудования в течение гарантийного срока.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Популярные модели (Bootstrap Cards + Badges) -->
+    <section class="py-5 bg-white border-top border-bottom" id="popular" aria-labelledby="popular-heading">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+          <div>
+            <h2 id="popular-heading" class="fw-bold mb-1">Популярные модели</h2>
+            <p class="text-muted mb-0">Флагманские устройства с наивысшими оценками звукорежиссёров</p>
+          </div>
+          <a href="catalog.html" class="btn btn-outline-secondary d-none d-md-inline-block">Весь каталог →</a>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <!-- Карточка 1 -->
+          <div class="col">
+            <article class="card h-100 product-card position-relative shadow-sm">
+              <span class="badge text-bg-warning badge-position">Хит продаж</span>
+              <div class="product-card-img-wrapper">
+                <img src="images/headphones-pro.svg" class="product-card-img" alt="Наушники SoundPulse Pro Wireless">
+              </div>
+              <div class="card-body d-flex flex-column">
+                <p class="text-muted small mb-1">Беспроводные наушники</p>
+                <h3 class="card-title h5 fw-bold">SoundPulse Pro Wireless</h3>
+                <p class="card-text text-muted small flex-grow-1">
+                  40-мм планарно-магнитные излучатели, активное шумоподавление ANC и до 45 часов автономности.
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                  <span class="fw-bold fs-5 text-dark">24 990 ₽</span>
+                  <div class="btn-group">
+                    <a href="product.html" class="btn btn-sm btn-outline-primary">Подробнее</a>
+                    <a href="order.html?product=headphones-pro" class="btn btn-sm btn-primary">В заказ</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Карточка 2 -->
+          <div class="col">
+            <article class="card h-100 product-card position-relative shadow-sm">
+              <span class="badge text-bg-success badge-position">Новинка</span>
+              <div class="product-card-img-wrapper">
+                <img src="images/studio-monitors.svg" class="product-card-img" alt="Студийные мониторы SoundPulse Studio 5X">
+              </div>
+              <div class="card-body d-flex flex-column">
+                <p class="text-muted small mb-1">Студийная акустика</p>
+                <h3 class="card-title h5 fw-bold">Studio 5X Active Pair</h3>
+                <p class="card-text text-muted small flex-grow-1">
+                  Активная двухполосная пара студийных мониторов bi-amp 100 Вт с DSP-коррекцией акустики помещения.
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                  <span class="fw-bold fs-5 text-dark">42 500 ₽</span>
+                  <div class="btn-group">
+                    <a href="product.html" class="btn btn-sm btn-outline-primary">Подробнее</a>
+                    <a href="order.html?product=studio-monitors" class="btn btn-sm btn-primary">В заказ</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Карточка 3 -->
+          <div class="col">
+            <article class="card h-100 product-card position-relative shadow-sm">
+              <span class="badge text-bg-danger badge-position">Скидка -18%</span>
+              <div class="product-card-img-wrapper">
+                <img src="images/dac-amp.svg" class="product-card-img" alt="ЦАП и усилитель SoundPulse Master DAC">
+              </div>
+              <div class="card-body d-flex flex-column">
+                <p class="text-muted small mb-1">ЦАП и усилители</p>
+                <h3 class="card-title h5 fw-bold">Master DAC & Amp Mini</h3>
+                <p class="card-text text-muted small flex-grow-1">
+                  Флагманский чип ESS ES9038PRO, балансный выход 4.4 мм Pentaconn и поддержка PCM 32 бит / 768 кГц.
+                </p>
+                <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                  <div>
+                    <span class="fw-bold fs-5 text-danger">18 900 ₽</span>
+                    <span class="text-decoration-line-through text-muted small ms-1">22 990 ₽</span>
+                  </div>
+                  <div class="btn-group">
+                    <a href="product.html" class="btn btn-sm btn-outline-primary">Подробнее</a>
+                    <a href="order.html?product=dac-amp" class="btn btn-sm btn-primary">В заказ</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="text-center mt-4 d-md-none">
+          <a href="catalog.html" class="btn btn-outline-secondary w-100">Смотреть весь каталог →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок со специальным предложением (Bootstrap Alert) -->
+    <section class="py-5" aria-labelledby="promo-heading">
+      <div class="container">
+        <div class="alert alert-warning border-warning shadow-sm p-4 mb-0" role="alert">
+          <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+            <div>
+              <h2 id="promo-heading" class="alert-heading h4 fw-bold mb-1">Специальное предложение месяца!</h2>
+              <p class="mb-0">
+                Закажите комплект из наушников и ЦАП до конца недели и получите фирменный кабель из бескислородной меди 4.4 мм в подарок.
+              </p>
+            </div>
+            <a href="order.html" class="btn btn-warning text-dark fw-bold px-4 flex-shrink-0">
+              Воспользоваться скидкой
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Интерактивный блок FAQ (Bootstrap Accordion) -->
+    <section class="py-5 bg-white border-top border-bottom" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 id="faq-heading" class="fw-bold">Часто задаваемые вопросы</h2>
+          <p class="text-muted">Ответы на популярные вопросы о покупке, тестировании и гарантии</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div class="accordion shadow-sm" id="accordionFaq">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Можно ли послушать технику со своими источниками звука?
+                  </button>
+                </h3>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body text-secondary">
+                    Да! В нашем шоуруме на Мясницкой подготовлены акустические стойки. Вы можете прийти со своим плеером, смартфоном или ноутбуком и сравнить звучание любых моделей на любимых треках.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Какие условия доставки по Москве и регионам России?
+                  </button>
+                </h3>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body text-secondary">
+                    По Москве доступна бесплатная курьерская доставка в день заказа при оформлении до 15:00. В регионы России доставляем экспресс-службами СДЭК и Boxberry с обязательной страховкой отправления.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Что делать, если звучание модели не подошло под мои задачи?
+                  </button>
+                </h3>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body text-secondary">
+                    Мы предоставляем 14 дней на домашнее тестирование оборудования. Если звук не оправдал ожиданий, вы можете обменять устройство на другую модель или вернуть полную стоимость при сохранении товарного вида.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок отзывов покупателей -->
+    <section class="py-5" id="reviews" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 id="reviews-heading" class="fw-bold">Отзывы аудиофилов и звукорежиссёров</h2>
+          <p class="text-muted">Мнения клиентов, выбравших аппаратуру SoundPulse для студии и дома</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-3">
+              <div class="card-body">
+                <div class="text-warning mb-2">★★★★★</div>
+                <blockquote class="blockquote mb-3">
+                  <p class="card-text small text-secondary">
+                    «Pro Wireless порадовали глубоким артикулированным басом без грязи в середине. В них комфортно работать над сведением по 6–8 часов подряд.»
+                  </p>
+                </blockquote>
+                <figcaption class="blockquote-footer mb-0">
+                  Алексей Смирнов, <cite title="Студия звукозаписи">звукорежиссёр</cite>
+                </figcaption>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-3">
+              <div class="card-body">
+                <div class="text-warning mb-2">★★★★★</div>
+                <blockquote class="blockquote mb-3">
+                  <p class="card-text small text-secondary">
+                    «Приобрел Studio 5X для домашней продакшн-студии. DSP-калибровка отлично выровняла низкие частоты в неподготовленной комнате.»
+                  </p>
+                </blockquote>
+                <figcaption class="blockquote-footer mb-0">
+                  Дмитрий Орлов, <cite title="Музыкальный продюсер">продюсер</cite>
+                </figcaption>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-3">
+              <div class="card-body">
+                <div class="text-warning mb-2">★★★★★</div>
+                <blockquote class="blockquote mb-3">
+                  <p class="card-text small text-secondary">
+                    «Master DAC раскрыл мои старые наушники с совершенно новой стороны. Пространственная сцена широкая, разделение инструментов на высоте.»
+                  </p>
+                </blockquote>
+                <figcaption class="blockquote-footer mb-0">
+                  Михаил Ковалёв, <cite title="Меломан">аудиоэнтузиаст</cite>
+                </figcaption>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал сайта -->
+  <footer class="site-footer py-5 mt-auto">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="images/logo.svg" alt="SoundPulse" class="navbar-brand-logo">
+            <span class="fs-5 fw-bold text-white">SoundPulse</span>
+          </div>
+          <p class="text-secondary small">
+            Премиальное аудиооборудование, студийные мониторы и усилители для музыкантов и ценителей звука высокой точности.
+          </p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h4 class="text-white h6 mb-3">Навигация</h4>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="index.html">Главная</a></li>
+            <li class="mb-2"><a href="catalog.html">Каталог</a></li>
+            <li class="mb-2"><a href="product.html">Товар дня</a></li>
+            <li class="mb-2"><a href="order.html">Заказ</a></li>
+            <li class="mb-2"><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h4 class="text-white h6 mb-3">Разделы</h4>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a href="index.html#advantages">Преимущества</a></li>
+            <li class="mb-2"><a href="index.html#popular">Популярные модели</a></li>
+            <li class="mb-2"><a href="index.html#faq">Вопросы и ответы</a></li>
+            <li class="mb-2"><a href="index.html#reviews">Отзывы клиентов</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3">
+          <h4 class="text-white h6 mb-3">Контакты шоурума</h4>
+          <p class="small text-secondary mb-1">г. Москва, ул. Мясницкая, д. 20</p>
+          <p class="small text-secondary mb-1">Тел: +7 (495) 890-24-30</p>
+          <p class="small text-secondary mb-3">Пн–Вс: 10:00 — 21:00</p>
+          <button class="btn btn-sm btn-outline-light w-100" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">
+            Оставить заявку
+          </button>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-secondary">
+        <div>© 2026 SoundPulse. Все права защищены.</div>
+        <div>Контрольная работа №2 | Студент: Белишко Кирилл (ЭФБО-17-25)</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно быстрой заявки (Bootstrap Modal) -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5 fw-bold" id="orderModalLabel">Быстрая заявка на подбор аудиотехники</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <form action="order.html" method="get">
+          <div class="modal-body">
+            <p class="text-muted small mb-3">
+              Оставьте контактные данные, и аудиоинженер свяжется с вами в течение 15 минут для консультации или резерва оборудования.
+            </p>
+            <div class="mb-3">
+              <label for="modalName" class="form-label">Ваше имя <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="modalName" name="name" placeholder="Константин" required>
+            </div>
+            <div class="mb-3">
+              <label for="modalPhone" class="form-label">Номер телефона <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="modalPhone" name="phone" placeholder="+7 (999) 000-00-00" required>
+            </div>
+            <div class="mb-3">
+              <label for="modalProduct" class="form-label">Интересующая категория</label>
+              <select class="form-select" id="modalProduct" name="category">
+                <option value="headphones" selected>Беспроводные и проводные наушники</option>
+                <option value="monitors">Студийные мониторы</option>
+                <option value="dac">ЦАП и усилители для наушников</option>
+                <option value="portable">Портативные акустические системы</option>
+              </select>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="modalAgree" required checked>
+              <label class="form-check-label small text-muted" for="modalAgree">
+                Согласен на обработку персональных данных в соответствии с политикой конфиденциальности
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+            <button type="submit" class="btn btn-primary">Отправить заявку</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Подключение локального Bootstrap JS Bundle -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
